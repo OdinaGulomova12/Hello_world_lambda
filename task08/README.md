@@ -1,47 +1,23 @@
-# task08
+# task08 AWS Lambda + Layers Integration
 
-High level project overview - business value it brings, non-detailed technical overview.
-
-### Notice
-All the technical details described below are actual for the particular
-version, or a range of versions of the software.
-### Actual for versions: 1.0.0
-
-## task08 diagram
-
-![task08](pics/task08_diagram.png)
-
-## Lambdas descriptions
-
-### Lambda `lambda-name`
-Lambda feature overview.
-
-### Required configuration
-#### Environment variables
-* environment_variable_name: description
-
-#### Trigger event
-```buildoutcfg
-{
-    "key": "value",
-    "key1": "value1",
-    "key2": "value3"
-}
+```shell
+syndicate generate project --name task08
+cd task08
+syndicate generate config --name "dev" `
+    --region "eu-central-1" `
+    --bundle_bucket_name "syndicate-education-platform-custom-sandbox-artifacts-sbox02/67d6e834/task08" `
+    --prefix "cmtr-67d6e834-" `
+    --extended_prefix "true" `
+    --tags "course_id:SEP_GL_6,course_type:stm,student_id:67d6e834,type:student" `
+    --iam_permissions_boundary "arn:aws:iam::905418349556:policy/eo_role_boundary" `
+    --access_key "" `
+    --secret_key "" `
+    --session_token ""
+[System.Environment]::SetEnvironmentVariable('SDCT_CONF', 'C:\projects\serverless\aws\epam_serverless_aws_deep_dive_06\task08\.syndicate-config-dev', [System.EnvironmentVariableTarget]::Process)
 ```
-* key: [Required] description of key
-* key1: description of key1
 
-#### Expected response
-```buildoutcfg
-{
-    "status": 200,
-    "message": "Operation succeeded"
-}
+```shell
+syndicate generate lambda `
+    --name api_handler `
+    --runtime java
 ```
----
-
-## Deployment from scratch
-1. action 1 to deploy the software
-2. action 2
-...
-
