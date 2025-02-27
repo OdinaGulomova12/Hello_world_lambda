@@ -1,0 +1,16 @@
+2025-02-21 21:01:49,933 [INFO] USER:user generate.py:72:project LOG: Project name: task02
+2025-02-21 21:01:49,934 [INFO] USER:user generate.py:79:project LOG: Project path: D:\tasks\Hello_world_lambda
+2025-02-21 21:01:49,937 [INFO] USER:user project.py:77:generate_project_structure LOG: Project task02 folder has been successfully created.
+2025-02-21 21:01:49,938 [INFO] USER:user helper.py:330:timed LOG: Stage project, elapsed time: 0:00:00.004633
+2025-02-21 21:02:04,072 [INFO] USER:user s3_resource.py:40:validate_bucket_name LOG: Starting validating bucket name 'syndicate-education-platform-custom-sandbox-artifacts-sbox02'
+2025-02-21 21:02:04,072 [INFO] USER:user s3_resource.py:73:validate_bucket_name LOG: Finished validating bucket name 'syndicate-education-platform-custom-sandbox-artifacts-sbox02'
+2025-02-21 21:02:04,073 [INFO] USER:user helper.py:525:convert LOG: Stripping run_id:SEP_PE_6,run_type:stm,type:user,user_id:a5aa5fc4 from "," a bit..
+2025-02-21 21:02:04,073 [INFO] USER:user helper.py:529:convert LOG: Converting: run_id:SEP_PE_6,run_type:stm,type:user,user_id:a5aa5fc4 to dict..
+2025-02-21 21:02:04,073 [INFO] USER:user helper.py:541:convert LOG: Converted to such a dict: {'run_id': 'SEP_PE_6', 'run_type': 'stm', 'type': 'user', 'user_id': 'a5aa5fc4'}
+2025-02-21 21:02:05,676 [WARNING] USER:user generator.py:76:generate_configuration_files LOG: The config_path property is not specified. The working directory is used
+2025-02-21 21:02:05,684 [WARNING] USER:user generator.py:93:generate_configuration_files LOG: The "project_path" property is not specified. The working directory will be used as a project path. To change the path, edit the syndicate.yml by path D:\tasks\Hello_world_lambda\task02\.syndicate-config-dev
+2025-02-21 21:02:05,693 [INFO] USER:user generator.py:155:generate_configuration_files LOG: Syndicate initialization has been completed. 
+Set SDCT_CONF:
+Unix: export SDCT_CONF="D:\tasks\Hello_world_lambda\task02\.syndicate-config-dev"
+Windows: setx SDCT_CONF D:\tasks\Hello_world_lambda\task02\.syndicate-config-dev
+2025-02-21 21:02:05,697 [INFO] USER:user helper.py:330:timed LOG: Stage config, elapsed time: 0:00:01.623621
